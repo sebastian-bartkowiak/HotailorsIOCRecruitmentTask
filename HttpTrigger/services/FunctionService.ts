@@ -11,7 +11,7 @@ export class FunctionService implements IFunctionService<any> {
 
     public async processMessageAsync(msg: any): Promise<any> {
         this._logger.info("Hello world");
-        this._logger.verbose(`${msg}`);
+        this._logger.verbose(`${JSON.stringify(msg)}`);
         return {msg: "success"};
     }
 }
