@@ -4,8 +4,8 @@ import {COMMON_TYPES} from "./commonTypes";
 
 import {Logger} from "../services/logger";
 import {ILogger} from "../services/iLogger";
-import { IFunctionService } from "../FunctionService/services/IFunctionService";
-import { FunctionService } from "../FunctionService/services/FunctionService";
+import { IFunctionService } from "../HttpTrigger/services/IFunctionService";
+import { FunctionService } from "../HttpTrigger/services/FunctionService";
 
 const container: Container = new Container();
 
