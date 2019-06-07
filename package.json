@@ -1,0 +1,43 @@
+{
+  "name": "integrations-manager",
+  "description": "",
+  "version": "",
+  "scripts": {
+    "prebuild": "npm run lint",
+    "build": "tsc",
+    "build:production": "npm run prestart && npm prune --production",
+    "watch": "tsc --w",
+    "prestart": "npm run build && func extensions install",
+    "start:host": "func start",
+    "start": "npm run start:host & npm run watch",
+    "test": "mocha -r ts-node/register tests/**/*.test.ts",
+    "lint": "tslint -c ./tslint/tslint.json --project ./tsconfig.json",
+    "lint:fix": "tslint -c ./tslint/tslint.json --project ./tsconfig.json --fix",
+    "lint:rebuild:rules": "tsc ./tslint/rules/underscorePrivatesRule.ts --lib \"es6\" && tsc ./tslint/rules/uppercaseStaticReadonlyRule.ts --lib \"es6\""
+  },
+  "dependencies": {
+    "ajv": "^6.10.0",
+    "azure-storage": "^2.10.2",
+    "inversify": "^5.0.1",
+    "reflect-metadata": "^0.1.13"
+  },
+  "devDependencies": {
+    "@azure/functions": "^1.0.3",
+    "@types/chai": "^4.1.7",
+    "@types/chai-as-promised": "^7.1.0",
+    "@types/mocha": "^5.2.6",
+    "@types/nconf": "^0.10.0",
+    "@types/node": "^11.13.11",
+    "@types/sinon": "^7.0.12",
+    "@types/sinon-chai": "^3.2.2",
+    "@types/uuid": "^3.4.4",
+    "chai": "^4.2.0",
+    "chai-as-promised": "^7.1.1",
+    "mocha": "^6.1.4",
+    "sinon": "^7.3.2",
+    "sinon-chai": "^3.3.0",
+    "ts-node": "^8.2.0",
+    "tslint": "^5.16.0",
+    "typescript": "^3.4.5"
+  }
+}
