@@ -1,0 +1,10 @@
+{
+  "bindings": [
+    {
+      "name": "functionService",
+      "type": "httpTrigger",
+      "direction": "in"
+    }
+  ],
+  "scriptFile": "./dist/FunctionService/index.js"
+}

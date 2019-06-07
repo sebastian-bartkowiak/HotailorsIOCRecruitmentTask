@@ -1,5 +1,5 @@
 {
-  "name": "integrations-manager",
+  "name": "test-function",
   "description": "",
   "version": "",
   "scripts": {
@@ -16,7 +16,6 @@
     "lint:rebuild:rules": "tsc ./tslint/rules/underscorePrivatesRule.ts --lib \"es6\" && tsc ./tslint/rules/uppercaseStaticReadonlyRule.ts --lib \"es6\""
   },
   "dependencies": {
-    "ajv": "^6.10.0",
     "azure-storage": "^2.10.2",
     "inversify": "^5.0.1",
     "reflect-metadata": "^0.1.13"
@@ -30,7 +29,6 @@
     "@types/node": "^11.13.11",
     "@types/sinon": "^7.0.12",
     "@types/sinon-chai": "^3.2.2",
-    "@types/uuid": "^3.4.4",
     "chai": "^4.2.0",
     "chai-as-promised": "^7.1.1",
     "mocha": "^6.1.4",
