@@ -2,10 +2,10 @@ import "reflect-metadata";
 import {Container} from "inversify";
 import {COMMON_TYPES} from "./commonTypes";
 
-import {Logger} from "../services/logger";
-import {ILogger} from "../services/iLogger";
-import { IFunctionService } from "../FunctionService/services/IFunctionService";
-import { FunctionService } from "../FunctionService/services/FunctionService";
+import {Logger} from "../commonServices/logger";
+import {ILogger} from "../commonServices/iLogger";
+import { IFunctionService } from "../AzureFunction/functionServices/IFunctionService";
+import { FunctionService } from "../AzureFunction/functionServices/FunctionService";
 
 const container: Container = new Container();
 
@@ -17,4 +17,4 @@ container
 container
     .bind<IFunctionService<any>>(COMMON_TYPES.IFunctionService)
     .to(FunctionService);
-export {container};
+export {container as commonContainer};

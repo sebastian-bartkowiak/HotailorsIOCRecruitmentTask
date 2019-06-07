@@ -1,7 +1,7 @@
 import { inject, injectable } from "inversify";
 import { IFunctionService } from "./IFunctionService";
 import { COMMON_TYPES } from "../../ioc/commonTypes";
-import { ILogger } from "../../services/iLogger";
+import { ILogger } from "../../commonServices/iLogger";
 
 @injectable()
 export class FunctionService implements IFunctionService<any> {

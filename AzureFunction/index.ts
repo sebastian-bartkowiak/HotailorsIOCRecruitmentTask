@@ -1,9 +1,9 @@
 import { AzureFunction, Context, HttpRequest } from "@azure/functions";
 import { container } from "../ioc/inversify.config";
 import { COMMON_TYPES } from "../ioc/commonTypes";
-import { Logger } from "../services/logger";
-import { ILogger } from "../services/iLogger";
-import { IFunctionService } from "./services/IFunctionService";
+import { Logger } from "../commonServices/logger";
+import { ILogger } from "../commonServices/iLogger";
+import { IFunctionService } from "./functionServices/IFunctionService";
 
 const httpTrigger: AzureFunction = async (ctx: Context, httpRequest: HttpRequest): Promise<any> => {
     const logger: Logger = container.get<ILogger>(COMMON_TYPES.ILogger) as Logger;
