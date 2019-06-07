@@ -1,0 +1,11 @@
+{
+  "bindings": [
+    {
+      "name": "functionService",
+      "type": "httpTrigger",
+      "direction": "in",
+      "connection": "QUEUE_CONNECTION_STRING"
+    }
+  ],
+  "scriptFile": "../dist/Function/index.js"
+}

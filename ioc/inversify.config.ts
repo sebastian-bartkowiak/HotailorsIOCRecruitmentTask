@@ -6,7 +6,6 @@ import {Logger} from "../services/logger";
 import {ILogger} from "../services/iLogger";
 
 
-
 const container: Container = new Container();
 
 container
@@ -14,4 +13,4 @@ container
     .to(Logger)
     .inSingletonScope();
 
-export {container as commonContainer};
+export {container};
