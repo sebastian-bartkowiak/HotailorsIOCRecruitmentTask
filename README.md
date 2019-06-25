@@ -16,7 +16,8 @@ Additional info:
   * Example invoke: ``localhost:7071/api/HttpTrigger?id=1&id=2&id=5&type=grass``
   * Example response: 
         ``{ status: 200, body: { pokemons: ["bulbasaur", "ivysaur"] } }``
-       
+
+Please do not use any external packages to handle pokeapi.
 
 
 ## Task 2
