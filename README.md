@@ -14,6 +14,7 @@ Additional info:
   * To fetch pokemon data use: https://pokeapi.co
   * Azure Function should be triggered via GET (HTTP triggered function)
   * Please use: lodash, axios and inversify
+  * Use existing structure and extend it
   * Example invoke: ``localhost:7071/api/HttpTrigger?id=1&id=2&id=5&type=grass``
   * Example response: 
         ``{ status: 200, body: { pokemons: ["bulbasaur", "ivysaur"] } }``
