@@ -28,6 +28,8 @@ export class PokeFinder implements IPokeFinder {
                 const parsedId: number = _.toInteger(potentialId);
                 if (!_.isNaN(parsedId) && _.toString(parsedId) === potentialId) {
                     parsedQuery.ids.push(parsedId);
+                } else {
+                    this._logger.warn(`Id value of "${potentialId}" was ignored, as it is not a valid integer`);
                 }
             });
             if (parsedQuery.ids.length === 0) {
