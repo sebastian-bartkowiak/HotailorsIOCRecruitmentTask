@@ -27,7 +27,7 @@ Good luck :slightly_smiling_face:
 
 # Task summary
 * Example invoke as documented above.
-* Repository contains Insomnia (https://insomnia.rest/) workspace to simplify testing of the code. Workspace can be easily imported with this button: [![Run in Insomnia}](https://insomnia.rest/images/run.svg)](https://insomnia.rest/run/?label=Hotailors%20-%20Sebastian%20Bartkowiak&uri=https%3A%2F%2Fgithub.com%2Fsebastian-bartkowiak%2FHotailorsIOCRecruitmentTask%2Fraw%2Fdevelopment%2FInsomnia_workspace.json)
+* Repository contains Insomnia (https://insomnia.rest/) workspace to simplify testing of the code. Workspace can be easily imported with this button: [![Run in Insomnia}](https://insomnia.rest/images/run.svg)](https://insomnia.rest/run/?label=Hotailors%20-%20Sebastian%20Bartkowiak&uri=https%3A%2F%2Fraw.githubusercontent.com%2Fsebastian-bartkowiak%2FHotailorsIOCRecruitmentTask%2Fmaster%2FInsomnia_workspace.json)
 * PokeAPI class is prepared to conform to PokeAPI Fair Use Policy (https://pokeapi.co/docs/v2#fairuse), and contains initial code required for caching responses obtained from PokeAPI. Actual caching would require usage of external database/cache engine and was concidered by author to be out of scope of this task.
 * Since author received no response to question asked via email following assumptions were made:
   * presence of both ``id`` and ``type`` in URL is required
