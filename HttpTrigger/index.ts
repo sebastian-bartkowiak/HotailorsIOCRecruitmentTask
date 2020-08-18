@@ -4,6 +4,7 @@ import { COMMON_TYPES } from "../ioc/commonTypes";
 import { Logger } from "../commonServices/logger";
 import { ILogger } from "../commonServices/iLogger";
 import { IFunctionService } from "./services/IFunctionService";
+import { IResponse } from "./utils/IResponse";
 import { Container } from "inversify";
 
 const httpTrigger: AzureFunction = async (ctx: Context, req: HttpRequest): Promise<any> => {
@@ -13,10 +14,10 @@ const httpTrigger: AzureFunction = async (ctx: Context, req: HttpRequest): Promi
 
     const functionService: IFunctionService<any> =
         container.get<IFunctionService<any>>(COMMON_TYPES.IFunctionService);
-    const response: any = await functionService.processMessageAsync(req.body);
+    const response: IResponse = await functionService.processMessageAsync(req.query);
     ctx.res = {
-        body: response,
-        status: 200,
+        body: response.body,
+        status: response.status,
         headers: { "Content-Type": "application/json" },
     };
     return ctx.res;
