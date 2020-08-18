@@ -1,9 +1,9 @@
 import "reflect-metadata";
-import {Container} from "inversify";
-import {COMMON_TYPES} from "./commonTypes";
+import { Container } from "inversify";
+import { COMMON_TYPES } from "./commonTypes";
 
-import {Logger} from "../commonServices/logger";
-import {ILogger} from "../commonServices/iLogger";
+import { Logger } from "../commonServices/logger";
+import { ILogger } from "../commonServices/iLogger";
 import { IFunctionService } from "../HttpTrigger/services/IFunctionService";
 import { FunctionService } from "../HttpTrigger/services/FunctionService";
 
