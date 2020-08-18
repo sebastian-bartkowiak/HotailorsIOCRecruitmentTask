@@ -24,3 +24,12 @@ Please do not use any external packages dedicated to handle pokeapi.
 In case of any questions send email to: <lukasz@hotailors.com>
 
 Good luck :slightly_smiling_face:
+
+# Task summary
+* Example invoke as documented above.
+* Repository contains Insomnia workspace to simplify testing of the code.
+* PokeAPI class is prepared to conform to PokeAPI Fair Use Policy (https://pokeapi.co/docs/v2#fairuse), and contains initial code required for caching responses obtained from PokeAPI. Actual caching would require usage of external database/cache engine and was concidered by author to be out of scope of this task.
+* Since author received no response to question asked via email following assumptions were made:
+  * presence of both ``id`` and ``type`` in URL is required
+  * ``id`` parameters that are not a valid integer are silently ignored, unless all of provided ids are found to be corrupted - then error is returned to the user
+  * if request send by user was valid, but resulted in no matches - instead of returning an empty array - separate error is returned to user, with standard 404 status code
